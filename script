@@ -1,0 +1,15 @@
+pip install snoo
+from snoo import Client
+
+client = Client()
+###enter username email and password##
+import datetime
+datetime
+start_date = datetime.datetime(yyyy,m,dd)
+end_date = datetime.datetime (yyyy,m,dd)
+data_sessions = client.export_sessions(start_date, end_date)
+from io import StringIO
+import pandas as pd
+df = pd.read_csv(StringIO(data_sessions))
+df
+df.to_csv('babydata.csv')
